@@ -18,6 +18,7 @@ def test_7_chars_password_should_raise_exception():
         # when
         validator.password_validate()
 
+
 def test_1_char_password_should_raise_exception():
     # given
     validator = PasswordValidator(content="1")
