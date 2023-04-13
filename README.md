@@ -7,7 +7,7 @@ bugs, o seu trabalho é consertá-lo, completá-lo e rodar o pipeline.<br>
 
 Este repositório foi desenvolvido utilizando o gerenciador de pacotes 
 **poetry**, mas você não precisa dele. Basta utilizar o arquivo 
-simple_web_api/requirements.txt<br>
+simple_web_api/requirements.txt
 
 ### Os critérios para senhas válidas são:
 1. Mínimo de 8 caracteres<br>
