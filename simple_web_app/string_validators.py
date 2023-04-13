@@ -55,11 +55,16 @@ class LowerCaseValidator(Validator):
 class EspecialCharacterValidator(Validator):
     def __init__(self):
         self.especial_set = set(punctuation)
+        self.prohibited_set = set("~^/")
 
     def validate(self, content):
         content_set = set(content)
         if self.especial_set.isdisjoint(content_set):
             msg = "Passwords must have at least 1 especial character!"
+            raise EspecialCharacterException(detail=msg)
+
+        if not self.prohibited_set.isdisjoint(content_set):
+            msg = "Password must not have characters '~', '^' or '/'!"
             raise EspecialCharacterException(detail=msg)
 
 
